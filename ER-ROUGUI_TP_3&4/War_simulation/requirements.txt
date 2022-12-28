@@ -1,2 +1,0 @@
-pytest-watch==4.2.0
-SQLALchemy == 1.4.42

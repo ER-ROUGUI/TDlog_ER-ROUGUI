@@ -2,7 +2,9 @@ from sqlalchemy import create_engine , Column, Integer , String ,ForeignKey ,sel
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker , relationship
-
+from model.game import Game
+from model.player import Player
+from model.vessel import Vessel
 
 engine = create_engine('sqlite:////tmp/tdlog.db', echo=True, future=True)
 Base = declarative_base(bind=engine)

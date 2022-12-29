@@ -100,3 +100,10 @@ async def exception_handler(request: Request, exc: Exception):
     return JSONResponse(status_code=500, content={"message": f"{exc}"})
 if __name__ == "__main__":
         uvicorn.run(app, host="0.0.0.0", port=5000)
+        
+#------TD4-----------------------------------------------------
+from starlette.staticfiles import StaticFiles
+app = FastAPI()
+BASE_PATH = Path(__file__).resolve().parent.parent
+app.mount("/views", StaticFiles(directory=BASE_PATH / 'views'), name="views")
+

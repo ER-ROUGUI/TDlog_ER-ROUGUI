@@ -30,7 +30,19 @@ window.onload = function () {
     });
     });
     
-    
+    const playButton = document.getElementById("play-button");
+  playButton.addEventListener("click", redirectToPlayGame);
+
+//#---appler mainteennat cette fonction----//
+function redirectToPlayGame() {
+  
+  const gameId = document.getElementById("game-id").value;
+  const playerName = document.getElementById("player-name").value;
+
+  const redirectUrl = "play_game.html?game-id=" + gameId + "&player-name=" + playerName;
+  window.location.href = redirectUrl;
+}
+
         
     function updateTable(vessels) {
     const table = document.getElementById("vessels-table");

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles/style.css">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <title>Gestion de la flotte</title>
+</head>
+<body>
+  <div id="menu">
+    <!-- menu de la page d'accueil -->
+    <ul>
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/create_game.html">Créer une partie</a></li>
+      <li><a href="/join_game.html">Rejoindre une partie</a></li>
+      <li><a href="/scores.html">Meilleurs scores</a></li>
+    </ul>
+  </div>
+  <div class="centered-element">
+    <h1>Gestion de la flotte</h1>
+    <form id="manage-fleet-form">
+      <label for="player-name">Ton Pseudo :</label>
+      <input type="text" id="player-name" name="player-name" required>
+      <br>
+      <label for="game-id">Identifiant de la partie :</label>
+      <input type="number" id="game-id" name="game-id" required>
+      <br>
+      <input type="submit" value="Charger ma flotte">
+    </form>
+    <br>
+    <table id="fleet-table">
+      <tr>
+        <th>choisi le Type de vaisseau</th>
+        <label for="x">Coordonnée X :</label><br>
+  <input type="number" id="x" name="x" min="0" max="9" required><br>
+  <label for="y">Coordonnée Y :</label><br>
+  <input type="number" id="y" name="y" min="0" max="9" required><br>
+  <label for="z">Coordonnée Z :</label><br>
+  <input type="number" id="z" name="z" min="0" max="9" required><br>
+      </tr>
+    </table>
+    <br>
+    <form id="add-vessel-form">
+      <label for="vessel-type">Type de vaisseau :</label>
+      <select id="vessel-type" name="vessel-type">
+        <option value="destroyer">Destroyer</option>
+        <option value="cruiser">Croiseur</option>
+        <option value="battleship">Porte-avions</option>
+      </select>
+      <br>
+      <label for="vessel-count">Nombre de vaisseaux :</label>
+      <input type="number" id="vessel-count" name="vessel-count" required>
+      <br>
+      <input type="submit" value="Valider">
+    </form>
+  </div>
+  <script src="scripts/manage-fleet.js"></script>
+</body>
+</html>
